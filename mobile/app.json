@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "MindVault AI",
+    "slug": "mindvault-ai",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "mindvaultai",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ai.mindvault.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "MindVault AI uses your camera to capture photos of documents, receipts, and moments you want to remember.",
+        "NSMicrophoneUsageDescription": "MindVault AI uses your microphone to hear your questions.",
+        "NSPhotoLibraryUsageDescription": "MindVault AI needs access to your photo library so you can attach images to a memory.",
+        "NSSpeechRecognitionUsageDescription": "MindVault AI uses speech recognition to turn your spoken questions into text.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "ai.mindvault.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1220",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_MEDIA_IMAGES"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0B1220",
+          "image": "./assets/icon.png",
+          "imageWidth": 140
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "MindVault AI uses your camera to capture photos of documents and moments you want to remember."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "MindVault AI needs access to your photo library so you can attach images to a memory."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "MindVault AI uses your microphone to hear your questions.",
+          "speechRecognitionPermission": "MindVault AI uses speech recognition to turn your spoken questions into text."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "b7083df8-b306-437c-8e1b-8b0a3020bab3"
+      }
+    }
+  }
+}

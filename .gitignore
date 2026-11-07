@@ -1,0 +1,14 @@
+
+# --- keep secrets and junk out of git ---
+node_modules/
+.next/
+.expo/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.log
+tsconfig.tsbuildinfo
+.claude/
